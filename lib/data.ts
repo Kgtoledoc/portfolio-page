@@ -43,48 +43,79 @@ export const experiencesData = [
     date: "2018-2019",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "IBM - Middleware Administrator",
+    location: "Bogota, CO",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "I worked as a middleware administrator for 7 months. I learned about cloud computing and DevOps.",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "2020 - 2020",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "Oracle - Cloud Solution Engineer",
+    location: "Bogota, CO",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+      "I worked as a cloud solution engineer for 1 year. I learned about Oracle Cloud and DevOps. I also migrated on-premise applications to OCI and create templates of IaC to deploy applications.",
     icon: React.createElement(FaReact),
-    date: "2021 - present",
+    date: "2020 - 2022",
+  },
+  {
+    title: "Banco de Bogota - DevOps Engineer",
+    location: "Bogota, CO",
+    description:
+      "",
+    icon: React.createElement(FaReact),
+    date: "2022 - 2022",
+  },
+  {
+    title: "Globant - Cloud Engineer",
+    location: "Bogota, CO",
+    description:
+      "",
+    icon: React.createElement(FaReact),
+    date: "2022 - 2025",
+  },
+  {
+    title: "Simetrik - Cloud Engineer",
+    location: "Bogota, CO",
+    description:
+      "",
+    icon: React.createElement(FaReact),
+    date: "2025 - Present",
   },
 ] as const;
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "Process Image using gRPC and EKS",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
+      "A web app that allows you to upload an image and process it using gRPC and EKS. It uses a microservices architecture.",
+    tags: ["Python", "gRPC", "EKS", "AWS"],
     imageUrl: corpcommentImg,
   },
   {
-    title: "rmtDev",
+    title: "MiNissanApp - Infrastructure",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
+      "Designed and implemented the infrastructure for a web app using Terraform and AWS. The app allows users to manage their Nissan cars.",
+    tags: ["Terraform", "AWS", "Typescript", "Node.js", "Lambda", "ECS", "S3", "RDS"],
     imageUrl: rmtdevImg,
   },
   {
-    title: "Word Analytics",
+    title: "Migration of Jenkins to Azure DevOps",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
+      "Migrated a Jenkins pipeline to Azure DevOps. The pipeline builds and deploys a web app using Terraform and Azure.",
+    tags: ["Azure DevOps", "Jenkins", "Python"],
     imageUrl: wordanalyticsImg,
   },
 ] as const;
 
 export const skillsData = [
+  "AWS",
+  "Terraform",
+  "Docker",
+  "Kubernetes",
+  "Ansible",
+  "Linux",
+  "Bash",
   "HTML",
   "CSS",
   "JavaScript",
@@ -93,7 +124,7 @@ export const skillsData = [
   "Next.js",
   "Node.js",
   "Git",
-  "Tailwind",
+  "AWS",
   "Prisma",
   "MongoDB",
   "Redux",
