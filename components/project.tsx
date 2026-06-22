@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs";
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -12,6 +13,8 @@ export default function Project({
   description,
   tags,
   imageUrl,
+  githubUrl,
+  liveUrl,
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -36,6 +39,30 @@ export default function Project({
           <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
             {description}
           </p>
+          <div className="flex gap-3 mt-3">
+            {githubUrl && (
+              <a
+                href={githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-700 hover:text-gray-950 dark:text-white/70 dark:hover:text-white transition"
+                aria-label="GitHub repository"
+              >
+                <BsGithub size={20} />
+              </a>
+            )}
+            {liveUrl && (
+              <a
+                href={liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-700 hover:text-gray-950 dark:text-white/70 dark:hover:text-white transition"
+                aria-label="Live demo"
+              >
+                <BsArrowUpRightSquare size={20} />
+              </a>
+            )}
+          </div>
           <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
             {tags.map((tag, index) => (
               <li
@@ -53,7 +80,7 @@ export default function Project({
           alt="Project I worked on"
           quality={95}
           className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
-        transition 
+        transition
         group-hover:scale-[1.04]
         group-hover:-translate-x-3
         group-hover:translate-y-3

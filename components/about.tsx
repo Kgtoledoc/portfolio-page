@@ -20,29 +20,27 @@ export default function About() {
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
   After graduating with a degree in{" "}
-  <span className="font-medium">Electrical Engineering</span> from the{" "}
-  <span className="font-medium">Universidad Nacional</span>, I began my career in the technology industry. I have experience in{" "}
-  <span className="font-medium">Cloud and DevOps Engineering</span> and have participated in various projects involving{" "}
-  <span className="font-medium">migration, operations, and service implementation</span> across cloud providers such as{" "}
-  <span className="font-medium">AWS, Azure, and Oracle Cloud Infrastructure (OCI)</span>. I’ve had the opportunity to work with large teams at companies like{" "}
-  <span className="font-medium">Globant, IBM, Oracle, and Banco de Bogotá</span>, and I’m currently contributing to a{" "}
-  <span className="font-medium">FinTech startup</span>.
+  <span className="font-medium">Electrical Engineering</span> from{" "}
+  <span className="font-medium">Universidad Nacional de Colombia</span>, I built a 6+ year career in{" "}
+  <span className="font-medium">Cloud and DevOps Engineering</span>. I’ve designed, automated, and operated large-scale infrastructure across{" "}
+  <span className="font-medium">AWS, GCP, Azure, and Oracle Cloud</span>. I’ve worked at{" "}
+  <span className="font-medium">IBM, Oracle, Banco de Bogotá, Globant, and Simetrik</span>, and I’m currently a{" "}
+  <span className="font-medium">Staff Software Engineer / Platform at Visa</span>.
 </p>
 
 <p className="mb-3">
-  I’m deeply curious and passionate about technology. I transitioned into{" "}
-  <span className="font-medium">full-stack web development</span> through self-study and bootcamps.{" "}
-  <span className="italic">My favorite part of programming</span> is the problem-solving aspect. I{" "}
-  <span className="underline">love</span> the feeling of finally figuring out a solution to a problem. My core stack is{" "}
-  <span className="font-medium">React, Next.js, Node.js, and MongoDB</span>. I am also familiar with{" "}
-  <span className="font-medium">TypeScript and Prisma</span>, and I’m always eager to learn new technologies. I am currently seeking a{" "}
-  <span className="font-medium">full-time position</span> as a software developer or DevOps engineer.
+  I hold multiple certifications including{" "}
+  <span className="font-medium">AWS Solutions Architect Professional</span> and six Oracle Cloud certifications.
+  My expertise spans{" "}
+  <span className="font-medium">Kubernetes, Terraform, CI/CD automation, observability, and SRE practices</span>.
+  I also build full-stack web applications and have a passion for{" "}
+  <span className="font-medium">IoT, AI agents, cybersecurity, and bug hunting</span>.
 </p>
 
 <p>
-  <span className="italic">When I'm not coding</span>, I enjoy playing video games, watching movies, and spending time with my dog. I also enjoy{" "}
+  <span className="italic">When I’m not coding</span>, I enjoy playing video games, watching movies, and spending time with my dog. I also enjoy{" "}
   <span className="font-medium">learning new things</span>, especially{" "}
-  <span className="font-medium">history and philosophy</span>. I'm currently learning how to play the guitar.
+  <span className="font-medium">history and philosophy</span>, and I’m currently learning to play the guitar.
 </p>
     </motion.section>
   );

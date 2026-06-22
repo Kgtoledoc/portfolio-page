@@ -63,19 +63,18 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I'm Kevin.</span> <span className="font-bold">I'm also known as Giok3r.</span> I'm a{" "}
-        <span className="font-bold">Cloud/DevOps engineer, AI Software Engineer, Bug Hunter and Full-stack Developer</span> with{" "}
-        <span className="font-bold">6 years</span> of experience. I enjoy creating digital architectures, finding bugs, and{" "}
-        <span className="font-bold">building</span>{" "}
-        <span className="underline">cloud infrastructures</span> and{" "}
-        <span className="underline">web applications</span>. I have a passion for{" "}
-        <span className="underline">cloud computing</span>,{" "}
-        <span className="underline">AI</span>,{" "}
-        <span className="underline">cybersecurity</span>,{" "}
-        <span className="underline">DevOps</span>,{" "}
-        <span className="underline">bug hunting</span>,{" "}
-        <span className="underline">penetration testing</span>,{" "}
-        <span className="underline">web development</span>,{" "}
+        <span className="font-bold">Hello, I'm Kevin.</span> I'm a{" "}
+        <span className="font-bold">Staff Platform Engineer & Cloud Architect</span> with{" "}
+        <span className="font-bold">6+ years</span> of experience building and operating large-scale cloud infrastructure across{" "}
+        <span className="underline">AWS</span>,{" "}
+        <span className="underline">GCP</span>, and{" "}
+        <span className="underline">Azure</span>. Certified{" "}
+        <span className="font-bold">AWS Solutions Architect Professional</span>. Passionate about{" "}
+        <span className="underline">Kubernetes</span>,{" "}
+        <span className="underline">DevOps automation</span>,{" "}
+        <span className="underline">observability</span>,{" "}
+        <span className="underline">IoT</span>, and{" "}
+        <span className="underline">AI engineering</span>.
       </motion.h1>
 
       <motion.div
