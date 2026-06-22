@@ -2,7 +2,6 @@
 
 import { useRef } from "react";
 import { projectsData } from "@/lib/data";
-import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs";
 
@@ -12,7 +11,6 @@ export default function Project({
   title,
   description,
   tags,
-  imageUrl,
   githubUrl,
   liveUrl,
 }: ProjectProps) {
@@ -21,78 +19,60 @@ export default function Project({
     target: ref,
     offset: ["0 1", "1.33 1"],
   });
-  const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+  const scale = useTransform(scrollYProgress, [0, 1], [0.95, 1]);
 
   return (
     <motion.div
       ref={ref}
-      style={{
-        scale: scaleProgess,
-        opacity: opacityProgess,
-      }}
-      className="group mb-3 sm:mb-8 last:mb-0"
+      style={{ opacity, scale }}
+      className="h-full"
     >
-      <section className="bg-gray-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-gray-200 transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
-        <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
-          <h3 className="text-2xl font-semibold">{title}</h3>
-          <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
+      <div className="group flex flex-col h-full bg-gray-100 border border-black/5 rounded-xl overflow-hidden hover:bg-gray-200 transition dark:bg-white/10 dark:hover:bg-white/20 dark:text-white">
+        <div className="h-1 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500" />
+        <div className="flex flex-col flex-grow p-6">
+          <h3 className="font-semibold text-lg leading-snug mb-2">{title}</h3>
+          <p className="text-sm leading-relaxed text-gray-600 dark:text-white/70 line-clamp-3 flex-grow">
             {description}
           </p>
-          <div className="flex gap-3 mt-3">
-            {githubUrl && (
-              <a
-                href={githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-700 hover:text-gray-950 dark:text-white/70 dark:hover:text-white transition"
-                aria-label="GitHub repository"
-              >
-                <BsGithub size={20} />
-              </a>
-            )}
-            {liveUrl && (
-              <a
-                href={liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-700 hover:text-gray-950 dark:text-white/70 dark:hover:text-white transition"
-                aria-label="Live demo"
-              >
-                <BsArrowUpRightSquare size={20} />
-              </a>
-            )}
+          <div className="mt-4 flex items-end justify-between gap-2">
+            <ul className="flex flex-wrap gap-1">
+              {tags.map((tag) => (
+                <li
+                  key={tag}
+                  className="bg-black/[0.7] px-2 py-0.5 text-[0.65rem] uppercase tracking-wider text-white rounded-full dark:text-white/70"
+                >
+                  {tag}
+                </li>
+              ))}
+            </ul>
+            <div className="flex gap-2 shrink-0">
+              {githubUrl && (
+                <a
+                  href={githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-500 hover:text-gray-900 dark:text-white/50 dark:hover:text-white transition"
+                  aria-label="GitHub repository"
+                >
+                  <BsGithub size={18} />
+                </a>
+              )}
+              {liveUrl && (
+                <a
+                  href={liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-500 hover:text-gray-900 dark:text-white/50 dark:hover:text-white transition"
+                  aria-label="Live demo"
+                >
+                  <BsArrowUpRightSquare size={18} />
+                </a>
+              )}
+            </div>
           </div>
-          <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
-            {tags.map((tag, index) => (
-              <li
-                className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70"
-                key={index}
-              >
-                {tag}
-              </li>
-            ))}
-          </ul>
         </div>
-
-        <Image
-          src={imageUrl}
-          alt="Project I worked on"
-          quality={95}
-          className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
-        transition
-        group-hover:scale-[1.04]
-        group-hover:-translate-x-3
-        group-hover:translate-y-3
-        group-hover:-rotate-2
-
-        group-even:group-hover:translate-x-3
-        group-even:group-hover:translate-y-3
-        group-even:group-hover:rotate-2
-
-        group-even:right-[initial] group-even:-left-40"
-        />
-      </section>
+      </div>
     </motion.div>
   );
 }

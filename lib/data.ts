@@ -24,6 +24,10 @@ export const links = [
     hash: "#skills",
   },
   {
+    name: "Certifications",
+    hash: "#certifications",
+  },
+  {
     name: "Experience",
     hash: "#experience",
   },
@@ -158,32 +162,38 @@ export const projectsData = [
   },
 ] as const;
 
-export const skillsData = [
-  "AWS",
-  "GCP",
-  "Azure",
-  "Terraform",
-  "AWS CDK",
-  "Docker",
-  "Kubernetes",
-  "Jenkins",
-  "GitHub Actions",
-  "Harness",
-  "Linux",
-  "Bash",
-  "Python",
-  "TypeScript",
-  "Node.js",
-  "Java",
-  "CI/CD",
-  "Grafana",
-  "Prometheus",
-  "Datadog",
-  "React",
-  "Next.js",
-  "NestJS",
-  "Express",
-  "PostgreSQL",
-  "MongoDB",
-  "Git",
+export const skillsData = {
+  "Cloud Platforms": ["AWS", "GCP", "Azure", "Oracle Cloud"],
+  "DevOps & IaC": ["Terraform", "AWS CDK", "Docker", "Kubernetes", "Jenkins", "GitHub Actions", "Harness", "Linux", "Bash", "Git", "CI/CD"],
+  "Observability": ["Grafana", "Prometheus", "Datadog"],
+  "Languages": ["Python", "TypeScript", "Node.js", "Java"],
+  "Web & Databases": ["React", "Next.js", "NestJS", "Express", "PostgreSQL", "MongoDB"],
+} as const;
+
+export const certificationsData = [
+  {
+    name: "AWS Solutions Architect Professional",
+    issuer: "Amazon Web Services",
+    badge: "SAP-C02",
+  },
+  {
+    name: "AWS Solutions Architect Associate",
+    issuer: "Amazon Web Services",
+    badge: "SAA-C03",
+  },
+  {
+    name: "AWS Developer Associate",
+    issuer: "Amazon Web Services",
+    badge: "DVA-C02",
+  },
+  {
+    name: "AWS Cloud Practitioner",
+    issuer: "Amazon Web Services",
+    badge: "CLF-C02",
+  },
+  {
+    name: "Oracle Cloud Certified",
+    issuer: "Oracle Cloud Infrastructure",
+    badge: "OCI ×6",
+  },
 ] as const;
