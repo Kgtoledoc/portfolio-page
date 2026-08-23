@@ -1,15 +1,21 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaCloud, FaCode } from "react-icons/fa";
+import { FaCloud, FaCode, FaShieldAlt, FaRobot, FaHandshake } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
 
+export const calendlyUrl = "https://calendly.com/kgtoledoc19/30min";
+
 export const links = [
   {
     name: "Home",
     hash: "#home",
+  },
+  {
+    name: "Services",
+    hash: "#services",
   },
   {
     name: "About",
@@ -195,5 +201,36 @@ export const certificationsData = [
     name: "Oracle Cloud Certified",
     issuer: "Oracle Cloud Infrastructure",
     badge: "OCI ×6",
+  },
+] as const;
+
+export const servicesData = [
+  {
+    title: "DevOps Retainer",
+    price: "$800/mo",
+    description:
+      "Ongoing infrastructure ownership — CI/CD, Kubernetes, IaC, and on-call support so your team ships without firefighting.",
+    icon: React.createElement(FaCloud),
+  },
+  {
+    title: "Security Audit",
+    price: "From $500",
+    description:
+      "Cloud and application security review — IAM hardening, misconfigurations, and a prioritized remediation report.",
+    icon: React.createElement(FaShieldAlt),
+  },
+  {
+    title: "AI Agent",
+    price: "From $49/mo",
+    description:
+      "Custom AI agent (WhatsApp, Slack, or web) built on Claude, wired to your data via RAG — for support, sales, or internal ops.",
+    icon: React.createElement(FaRobot),
+  },
+  {
+    title: "Consulting",
+    price: "$120/hr",
+    description:
+      "Cloud architecture, Platform Engineering, or AI Engineering — scoped project work or a second opinion on a critical decision.",
+    icon: React.createElement(FaHandshake),
   },
 ] as const;
