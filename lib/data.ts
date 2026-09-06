@@ -1,6 +1,6 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaCloud, FaCode, FaShieldAlt, FaRobot, FaHandshake } from "react-icons/fa";
+import { FaCloud, FaCode, FaShieldAlt, FaRobot, FaHandshake, FaPiggyBank } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
@@ -232,5 +232,12 @@ export const servicesData = [
     description:
       "Cloud architecture, Platform Engineering, or AI Engineering — scoped project work or a second opinion on a critical decision.",
     icon: React.createElement(FaHandshake),
+  },
+  {
+    title: "FinOps Audit",
+    price: "20% of savings",
+    description:
+      "I review your AWS/GCP bill for rightsizing, orphaned resources, and missed savings plans. You only pay a cut of what I actually find — no savings, no charge.",
+    icon: React.createElement(FaPiggyBank),
   },
 ] as const;
